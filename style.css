@@ -1,0 +1,48 @@
+#board {
+  width: 400px;
+  height: 400px; 
+  display: grid;
+  grid-template: subgrid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+    "board board board"
+    "board board board"
+    "board board board";
+  /* grid-template: repeat(3, 1fr) / repeat(3, 1fr); */
+}
+
+[data-cell] {
+  width: 133.33px;
+  height: 133.33px;
+  box-sizing: border-box;
+  display: flex;
+  background-color: #f2f2f2;
+  border: 1px solid #808080;
+  font-size: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+#announce-winner {
+  grid-area: winner;
+  font-size: 50px;
+}
+
+#clear {
+  grid-area: clear;
+  height: 400px;
+}
+
+/* .fas,.far {
+  display:none;
+} */
+
+.total {
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-areas: 
+    "board clear"
+    "winner winner";
+}
