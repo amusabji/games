@@ -30,7 +30,7 @@
 
 #clear {
   grid-area: clear;
-  height: 400px;
+  height: 200px;
 }
 
 /* .fas,.far {
@@ -45,4 +45,15 @@
   grid-template-areas: 
     "board clear"
     "winner winner";
+}
+.total {
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-areas: 
+    "board clear"
+    "winner winner";
+  align-items: center;
+  justify-content: center;
 }
