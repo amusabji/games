@@ -9,6 +9,7 @@
     "board board board"
     "board board board";
   /* grid-template: repeat(3, 1fr) / repeat(3, 1fr); */
+  
 }
 
 [data-cell] {
@@ -30,8 +31,10 @@
 
 #clear {
   grid-area: clear;
-  height: 200px;
+  height: 400px;
+  float: left;
 }
+
 
 /* .fas,.far {
   display:none;
@@ -46,14 +49,38 @@
     "board clear"
     "winner winner";
 }
-.total {
-  width: 500px;
-  height: 500px;
-  display: grid;
-  grid-template-columns: 80% 20%;
-  grid-template-areas: 
-    "board clear"
-    "winner winner";
-  align-items: center;
-  justify-content: center;
+.overall{
+  position:absolute;
+  padding: 100px 100px 200px 500px;
+  float: left;
+}
+@media screen and (min-width:100px) {
+  .left, .main, .right {
+    width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+.button{
+  margin: 0px 0px 50px 20px;
+  width: 350px;
+  height: 30px;
+  
+}
+.hexagon {
+  width: 101.7px;
+  height: 56px;
+  background: #32557f;
+  position: relative;
+  border-radius: 20px;
+
+}
+
+.triangle .triangle-left {
+  border-top: 50px solid transparent;
+  border-right: 100px solid #32557f;
+  border-bottom: 50px solid transparent;
+}
+.triangle .triangle-right {
+  border-top: 50px solid transparent;
+  border-left: 100px solid #32557f;
+  border-bottom: 50px solid transparent;
 }
